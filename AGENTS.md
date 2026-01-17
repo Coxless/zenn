@@ -53,5 +53,5 @@ GitHub Copilotがコミットを行う際は、必ずコミットメッセージ
 
 ```
 
-Co-Authored-By: GitHub Copilot <github-copilot[bot]@users.noreply.github.com>
+Co-Authored-By: GitHub Copilot <copilot@github.com>
 ```
