@@ -48,6 +48,10 @@ pnpm preview
 
 GitHub Copilotがコミットを行う際は、必ずコミットメッセージの末尾に以下のCo-Authored-By行を追加してください：
 
+**重要**
+コミットメッセージとco-Authored-By行の間では必ず一行開業すること
+
 ```
+
 Co-Authored-By: GitHub Copilot <github-copilot[bot]@users.noreply.github.com>
 ```
