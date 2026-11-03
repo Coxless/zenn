@@ -1,2 +1,5 @@
 node_modules/
+# Workshop: ロックファイルはリポジトリに含めてはいけない (定義 .workshop/*.yaml はコミットする)
+.workshop.lock
 .DS_Store
+.pnpm-store/
