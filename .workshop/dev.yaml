@@ -4,18 +4,16 @@
 # - name はファイル名 (.workshop/<name>.yaml) と一致させる
 # - base / sdks を変更したら `workshop refresh` で反映する
 # - actions の変更は refresh 不要 (即時反映)
-#
-# mise.toml と同じツール構成 (Node 22 / pnpm 10.21.0) を Workshop で用意する。
 
 name: dev
-base: ubuntu@24.04   # ubuntu@22.04 / 24.04 / 26.04
+base: ubuntu@26.04   # ubuntu@22.04 / 24.04 / 26.04
 
 sdks:
   # `zenn preview` (ワークショップ内の 8000 番) をホストの 127.0.0.1:8000 で見る。
   # system の tunnel プラグは他の SDK にある同名のスロットにだけ自動接続されるので、
   # node 側にスロット、system 側にプラグを同じ名前で定義する。
   - name: node          # pnpm は SDK 同梱の Corepack 経由で使う
-    channel: 22/stable
+    channel: 24/stable
     slots:
       preview:          # ワークショップ側の接続先
         interface: tunnel
@@ -32,7 +30,7 @@ actions:
   setup: |
     cd /project
     export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
-    corepack prepare pnpm@10.21.0 --activate
+    corepack prepare pnpm@latest --activate
     pnpm install
 
   preview: |

@@ -16,11 +16,25 @@ published: false  # 下書きはfalse、公開時はtrue
 ---
 ```
 
+## 開発環境（Ubuntu Workshop）
+
+Node.js や `pnpm` などのコマンドは、Ubuntu Workshop（`.workshop/dev.yaml`）のコンテナ環境経由で実行します。
+
+初回セットアップ・依存パッケージの更新時：
+```bash
+workshop run -- setup
+```
+
+任意の `pnpm` / `node` コマンドを実行する場合：
+```bash
+workshop exec -- pnpm <command>
+```
+
 ## 記事作成コマンド
 
 新しい記事を作成する場合：
 ```bash
-pnpm create-article
+workshop run -- create-article
 ```
 
 ## 画像の参照方法
@@ -41,7 +55,7 @@ pnpm create-article
 
 記事のプレビューを確認する場合：
 ```bash
-pnpm preview
+workshop run -- preview
 ```
 
 ---
